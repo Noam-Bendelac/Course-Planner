@@ -1,0 +1,73 @@
+<html>
+
+<head>
+	<title>Course Planner</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+
+<body>
+	<div id="container">
+		<div id="header"></div>
+		<div id="canvas">
+			<!-- <div id="test-page"></div> -->
+			<!-- <div id="page-load">
+				<div class="circle"></div><div class="circle"></div><div class="circle"></div>
+			</div> -->
+			<div id="page-fit-container">
+				<div id="page">
+					<div id="spacer"></div>
+					<div class="page-section" id="page-section-left"></div>
+					<div class="page-section" id="page-section-main">
+						<svg style="width:0;height:0;">
+							<defs>
+								<marker id="pre-arrowhead" viewBox="0 0 14 10" refX="0" refY="5" markerWidth="14" markerHeight="10" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+									<path d="M 0 0 L 14 5 L 0 10 z" style="fill:black;" />
+								</marker>
+
+								<marker id="co-arrowhead" viewBox="0 0 14 10" refX="0" refY="5" markerWidth="14" markerHeight="10" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+									<clipPath id="clip">
+										<path id="ld" d="M 0 0 L 14 5 L 0 10 z"/>
+									</clipPath>
+									<use href="#ld" stroke="black" stroke-width="3" fill="white" clip-path="url(#clip)" />
+								</marker>
+							</defs>
+						</svg>
+						<!-- div.spec 's will be dynamically inserted here -->
+						<!-- div.course 's will be dynamically inserted in each div.spec -->
+					</div>
+					<div class="page-section" id="page-section-right"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		var onLoad = function(callback) {
+			onLoad.funcs.push(callback);
+		}
+		onLoad.funcs = [];
+	</script>
+
+	<script src="drag.js"></script>
+	<script src="app.js"></script>
+
+	<!-- <script src="specCS.js"></script> -->
+	<!-- <script src="load"></script> -->
+	<script src="Course.js"></script>
+	<script src="Arrow.js"></script>
+	<script src="Dot.js"></script>
+	<script src="recalcAssignment.js"></script>
+
+
+	<script> for (func of onLoad.funcs) { func(); } </script>
+	<!-- <script src="onLoad.js"></script> -->
+
+	<!-- <script> $('#page-fit-container').css('visibility', 'visible'); </script> -->
+	<div></div>
+</body>
+
+</html>
