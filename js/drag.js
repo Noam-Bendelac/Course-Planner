@@ -57,13 +57,13 @@ function drag() {
 }
 
 // $(drag);
-onLoad(drag);
+// onLoad(drag);
 
 
 
 
 
-
+/*
 
 $('#canvas').on('wheel', function(event) {
 	
@@ -99,5 +99,5 @@ $('#canvas').on('wheel', function(event) {
 	});
 });
 
-
+*/
 
