@@ -1,6 +1,8 @@
 
 
-function centerAndScale() {
+var nsGlobal = nsGlobal || {};
+
+nsGlobal.centerAndScale = function() {
 	// console.log(this);
 	scale = Math.min(
 		($('#canvas').height() - 2*25) / $('#page').height(), // I believe returns height before transform scaling
@@ -13,9 +15,9 @@ function centerAndScale() {
 
 		'transform': `scale(${scale})`,
 	});
-}
+};
 
-$(window).resize(centerAndScale);
+// $(window).resize(centerAndScale);
 // onLoad(centerAndScale);
 
 
@@ -27,7 +29,7 @@ $(window).resize(centerAndScale);
 
 // Handles click and drag for moving the page within the canvas
 
-function drag() {
+nsGlobal.drag = function() {
 
 	var curDownYPos = 0;
 	var curDownXPos = 0;
@@ -54,7 +56,7 @@ function drag() {
 	$(document).mouseup(function (e) { curDown = false; });
 	$(document).mouseleave(function (e) { curDown = false; });
 	
-}
+};
 
 // $(drag);
 // onLoad(drag);

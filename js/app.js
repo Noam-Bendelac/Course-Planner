@@ -1,20 +1,24 @@
 
 
-var globals = globals || {};
+var nsGlobal = nsGlobal || {};
 
 
-$.getJSON('res/checksheets/CSmajor.json', data => {
-	globals.specCS = data; //xconsole.log(data);
-	globals.loadSpecs();
-	centerAndScale();
+(async function app() {
+	data = await $.getJSON('res/checksheets/CSmajor.json');
+	nsGlobal.specCS = data;
+	// console.log(data);
 	
-	for (let course of globals.courses) { course.constrained = false; }
-	recalcAssignment();
-});
+	nsGlobal.loadSpecs();
+	nsGlobal.centerAndScale();
+	
+	for (let course of nsGlobal.courses) { course.constrained = false; }
+	nsGlobal.recalcAssignment();
+})();
 
 
+$(window).resize(nsGlobal.centerAndScale);
 
-// drag();
+// nsGlobal.drag();
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-class Dot {
+nsGlobal.Dot = class {
 	constructor(arr) {
 		[this.refID, this.x, this.y] = arr;
 	}

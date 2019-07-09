@@ -1,42 +1,29 @@
 
-// "use strict";
 
+var nsGlobal = nsGlobal || {};
 
-// window.addEventListener('load', loadSpecs, false);
-// $(loadSpecs);
-// onLoad(loadSpecs);
-// loadCourses();
-// let globals = {};
+var nsLoad = nsLoad || {};
 
-
-
-// console.log('hh');
-// globals.specCS = specCS;
-
-var globals = globals || {};
-
-var loadNS = loadNS || {};
-
-globals.loadSpecs = function() {
+nsGlobal.loadSpecs = function() {
 	let spec = $('<div/>', {
 		'class': 'spec',
 		id: 'spec-1',
 	}).appendTo('#page-section-main');
 
-	globals.courses = loadNS.loadCourses(globals.specCS);
-	let arrows = loadNS.loadArrows(globals.specCS);
-	let dots = loadNS.loadDots(globals.specCS);
+	nsGlobal.courses = nsLoad.loadCourses(nsGlobal.specCS);
+	let arrows = nsLoad.loadArrows(nsGlobal.specCS);
+	let dots = nsLoad.loadDots(nsGlobal.specCS);
 
 	let maxRow = 0,
 			maxCol = 0;
-	for (let course of globals.courses) {
+	for (let course of nsGlobal.courses) {
 		maxRow = Math.max(maxRow, course.row);
 		maxCol = Math.max(maxCol, course.col);
 		course.addToHTML(spec);
 	}
 
 	for (let arrow of arrows) {
-		arrow.addToHTML(spec, globals.courses);
+		arrow.addToHTML(spec, nsGlobal.courses);
 	}
 
 	for (let dot of dots) {
@@ -58,29 +45,29 @@ globals.loadSpecs = function() {
 
 
 
-loadNS.loadCourses = function(spec) {
+nsLoad.loadCourses = function(spec) {
 	let courses = [];
 
 	for (let element of spec.courses) {
-		courses.push(new Course(element));
+		courses.push(new nsGlobal.Course(element));
 	}
 	return courses;
 }
 
-loadNS.loadArrows = function(spec) {
+nsLoad.loadArrows = function(spec) {
 	let arrows = [];
 
 	for (let element of spec.arrows) {
-		arrows.push(new Arrow(element));
+		arrows.push(new nsGlobal.Arrow(element));
 	}
 	return arrows;
 }
 
-loadNS.loadDots = function(spec) {
+nsLoad.loadDots = function(spec) {
 	let dots = [];
 
 	for (let element of spec.dots) {
-		dots.push(new Dot(element));
+		dots.push(new nsGlobal.Dot(element));
 	}
 	return dots;
 }

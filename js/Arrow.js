@@ -8,7 +8,7 @@
 
 
 
-class Arrow {
+nsGlobal.Arrow = class {
 	constructor(arr) {
 		[this.end, this.start, this.style, this.path/*, ...*/] = arr;
 		// console.log(this.style);

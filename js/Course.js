@@ -2,7 +2,7 @@
 
 
 
-class Course {
+nsGlobal.Course = class {
 
 	constructor(arr) {
 		[this.id, this.name, this.row, this.col, this.credits, this.prereqs, this.coreqs] = arr;
