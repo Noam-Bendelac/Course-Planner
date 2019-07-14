@@ -29,6 +29,18 @@ nsGlobal.Course = class {
 		}).appendTo(this.el);
 		// .css('grid-row', (this.row+1) + ' / ' + (this.row+1))
 		// 	.css('grid-column', (this.col+1) + ' / ' + (this.col+1));
+
+		let self = this;
+		this.el.on('click', function() {
+			// TODO possibly move binding and unbinding of event to selection callback in semesterSelector.js
+			if (nsGlobal.selectedSemester != null) {
+				self.constrained = true;
+				console.log(nsGlobal.selectedSemester);
+				
+				self.semester = nsGlobal.selectedSemester;
+				nsGlobal.recalcAssignment();
+			}
+		});
 	}
 }
 

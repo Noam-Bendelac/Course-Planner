@@ -9,6 +9,7 @@ var nsGlobal = nsGlobal || {};
 	// console.log(data);
 	
 	nsGlobal.loadSpecs();
+	nsGlobal.createSemesterSelector();
 	nsGlobal.centerAndScale();
 	
 	for (let course of nsGlobal.courses) { course.constrained = false; }

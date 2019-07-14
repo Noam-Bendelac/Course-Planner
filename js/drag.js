@@ -9,9 +9,9 @@ nsGlobal.centerAndScale = function() {
 		($('#canvas').width() - 2*25) / $('#page').width()
 	);
 
-	$('#page-fit-container').css({
-		'top': ($('#canvas').height() - $('#page').height()/**scale*/) / 2,
-		'left': ($('#canvas').width() - $('#page').width()/**scale*/) / 2,
+	$('#page').css({
+		'top': ($('#canvas').height() - $('#page').height()*scale) / 2,
+		'left': ($('#canvas').width() - $('#page').width()*scale) / 2,
 
 		'transform': `scale(${scale})`,
 	});
