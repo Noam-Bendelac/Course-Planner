@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="400">
-	<rect width="400" height="400" style="fill: transparent;" />
-	<rect x="50" y="10" width="300" height="150" style="
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="360" height="360">
+	<rect width="360" height="360" style="fill: transparent;" />
+	<rect x="0" y="60" width="160" height="80" style="
 		fill: hsl(90, 60%, 65%);
 		stroke-width: 10;
 		stroke: black;
 	" />
-	<line x1="200" y1="160" x2="200" y2="240" style="
+	<line x1="80" y1="140" x2="80" y2="220" style="
 		stroke: black;
 		stroke-width: 10;
 	" />
-	<rect x="50" y="240" width="300" height="150" style="
+	<rect x="200" y="60" width="160" height="80" style="
 		fill: hsl(140, 45%, 65%);
+		stroke-width: 10;
+		stroke: black;
+	" />
+	<line x1="280" y1="140" x2="280" y2="220" style="
+		stroke: black;
+		stroke-width: 10;
+	" />
+	<rect x="0" y="220" width="160" height="80" style="
+		fill: hsl(180, 60%, 65%);
+		stroke-width: 10;
+		stroke: black;
+	" />
+	<rect x="200" y="220" width="160" height="80" style="
+		fill: hsl(200, 60%, 65%);
 		stroke-width: 10;
 		stroke: black;
 	" />
